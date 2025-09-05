@@ -3,7 +3,6 @@ package com.borened.mock;
 import com.borened.mock.annotation.MockResponse;
 import com.borened.mock.model.Foo;
 import com.borened.mock.model.User;
-import jdk.internal.org.objectweb.asm.TypeReference;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;

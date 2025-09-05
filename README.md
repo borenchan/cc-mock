@@ -1,5 +1,5 @@
 # cc-mock
-
+[English Document](README.en.md)
 #### 介绍
 
 cc-mock是一款的智能mock工具。支持springboot项目下的自动生成接口响应数据。方便在接口开发完成之前，前端联调数据时使用。
@@ -8,18 +8,14 @@ cc-mock是一款的智能mock工具。支持springboot项目下的自动生成�
 
 项目环境: JDK1.8+
 
-
-软件架构说明
-
-
 #### 安装教程
 
 1. 引入依赖
    ```xml
     <dependency>
-        <groupId>com.borened.mock</groupId>
+        <groupId>io.github.boren07</groupId>
         <artifactId>cc-mock-api-starter</artifactId>
-        <version>latest</version>
+        <version>1.0.0</version>
     </dependency>
    ```
 2. 配置mock启用，在配置文件中进行开启，开发完毕后需关闭mock。

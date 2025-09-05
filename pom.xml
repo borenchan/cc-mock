@@ -9,13 +9,33 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.borened.mock</groupId>
+    <groupId>io.github.boren07</groupId>
     <artifactId>cc-mock</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>cc-mock</name>
+    <url>https://github.com/boren07/cc-mock</url>
+    <description>A mock framework for Java</description>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
-    <description>cc-mock</description>
+    <developers>
+        <developer>
+            <name>boren07</name>
+            <email>boren1007@qq.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/boren07/cc-mock.git</connection>
+        <developerConnection>scm:git:ssh://github.com/boren07/cc-mock.git</developerConnection>
+        <url>https://github.com/boren07/cc-mock</url>
+    </scm>
+
     <modules>
         <module>cc-mock-core</module>
         <module>cc-mock-api-starter</module>
@@ -47,12 +67,12 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.borened.mock</groupId>
+                <groupId>io.github.boren07</groupId>
                 <artifactId>cc-mock-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.borened.mock</groupId>
+                <groupId>io.github.boren07</groupId>
                 <artifactId>cc-mock-api-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -65,8 +85,79 @@
     </dependencyManagement>
     <build>
         <plugins>
+            <!--发布插件-->
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.8.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>centralRepository</publishingServerId>
+                    <autoPublish>true</autoPublish>
+                </configuration>
+            </plugin>
+            <!-- 生成源码插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
+            <!-- 生成javadoc插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- GPG签名插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.2.7</version>
+                <executions>
+                    <execution>
+<!--                        <id>sign-artifacts</id>-->
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <gpgArguments>
+                        <argument>--pinentry-mode</argument>
+                        <argument>loopback</argument>
+                    </gpgArguments>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
+    <profiles>
+        <profile>
+            <id>gpg</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <gpg.executable>gpg</gpg.executable>
+                <gpg.keyname>BDFF95881307BD591E00D0839B2E6A2FCDFE77F8</gpg.keyname>
+                <gpg.passphrase>BDFF95881307BD591E00D0839B2E6A2FCDFE77F8</gpg.passphrase>
+            </properties>
+        </profile>
+    </profiles>
 </project>
