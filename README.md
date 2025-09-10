@@ -13,7 +13,7 @@ cc-mock是一款的智能mock工具。支持springboot项目下的自动生成�
 1. 引入依赖
    ```xml
     <dependency>
-        <groupId>io.github.boren07</groupId>
+        <groupId>io.github.borenchan</groupId>
         <artifactId>cc-mock-api-starter</artifactId>
         <version>1.0.0</version>
     </dependency>
@@ -95,7 +95,7 @@ cc-mock是一款的智能mock工具。支持springboot项目下的自动生成�
   }
   ```
 
-- [springboot集成cc-mock的案例。](https://gitee.com/boren07/cc-mock/tree/master/cc-mock-samples/spring-boot-sample)
+- [springboot集成cc-mock的案例。](https://gitee.com/borenchan/cc-mock/tree/master/cc-mock-samples/spring-boot-sample)
 ##### 自定义MOCK示例
 
   ```java

@@ -15,7 +15,7 @@ cc-mock is an intelligent mock tool. It supports the automatic generation of int
 1.  Add the dependency:
     ```xml
     <dependency>
-        <groupId>io.github.boren07</groupId>
+        <groupId>io.github.borenchan</groupId>
         <artifactId>cc-mock-api-starter</artifactId>
         <version>1.0.0</version>
     </dependency>
@@ -93,7 +93,7 @@ cc-mock is an intelligent mock tool. It supports the automatic generation of int
         }
     }
     ```
-3.  [View the Spring Boot integration case for cc-mock。](https://github.com/boren07/cc-mock/tree/master/cc-mock-samples/spring-boot-sample)
+3.  [View the Spring Boot integration case for cc-mock。](https://github.com/borenchan/cc-mock/tree/master/cc-mock-samples/spring-boot-sample)
 
 
 ### Custom Mock Example

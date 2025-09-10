@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>io.github.boren07</groupId>
+        <groupId>io.github.borenchan</groupId>
         <artifactId>cc-mock</artifactId>
         <version>1.0.0</version>
     </parent>
@@ -28,7 +28,7 @@
         </dependency>
 
         <dependency>
-            <groupId>io.github.boren07</groupId>
+            <groupId>io.github.borenchan</groupId>
             <artifactId>cc-mock-core</artifactId>
         </dependency>
         <dependency>

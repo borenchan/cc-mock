@@ -9,12 +9,12 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>io.github.boren07</groupId>
+    <groupId>io.github.borenchan</groupId>
     <artifactId>cc-mock</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>cc-mock</name>
-    <url>https://github.com/boren07/cc-mock</url>
+    <url>https://github.com/borenchan/cc-mock</url>
     <description>A mock framework for Java</description>
     <licenses>
         <license>
@@ -25,15 +25,15 @@
 
     <developers>
         <developer>
-            <name>boren07</name>
+            <name>borenchan</name>
             <email>boren1007@qq.com</email>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/boren07/cc-mock.git</connection>
-        <developerConnection>scm:git:ssh://github.com/boren07/cc-mock.git</developerConnection>
-        <url>https://github.com/boren07/cc-mock</url>
+        <connection>scm:git:git://github.com/borenchan/cc-mock.git</connection>
+        <developerConnection>scm:git:ssh://github.com/borenchan/cc-mock.git</developerConnection>
+        <url>https://github.com/borenchan/cc-mock</url>
     </scm>
 
     <modules>
@@ -67,12 +67,12 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.github.boren07</groupId>
+                <groupId>io.github.borenchan</groupId>
                 <artifactId>cc-mock-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.github.boren07</groupId>
+                <groupId>io.github.borenchan</groupId>
                 <artifactId>cc-mock-api-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
